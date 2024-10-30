@@ -1,14 +1,11 @@
-addEventListener("load", () => {
+addEventListener("DOMContentLoaded", () => {
   const input = document.querySelector(".mobile-header-search-field");
   const placeholders = [
-    "Search for Club",
-    "Search for Country",
-    "Search for Player",
-    "Search for Product",
+    "Search for Club, Country, Player or Product",
   ];
   let currentPlaceholderIndex = 0;
   let currentCharIndex = 0;
-  let typingDelay = 150;
+  let typingDelay = 50;
   let erasingDelay = 100;
   let newPlaceholderDelay = 2000;
   let cursorVisible = true;
@@ -34,7 +31,7 @@ addEventListener("load", () => {
         cursorVisible = true;
         setInterval(toggleCursor, 500); // Start blinking cursor after typing
       }, newPlaceholderDelay);
-      setTimeout(erasePlaceholder, newPlaceholderDelay);
+    //   setTimeout(erasePlaceholder, newPlaceholderDelay);
     }
   }
 
