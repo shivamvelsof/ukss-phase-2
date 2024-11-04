@@ -1,0 +1,162 @@
+.category-banner-section {
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+}
+.category-banner-section .category-banner-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 15px;
+}
+.category-banner-section .category-banner-wrapper .breadcrumbs {
+  background-color: transparent;
+  max-width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0px !important;
+}
+.category-banner-section .category-banner-wrapper .breadcrumbs .bodyTextgrySmall {
+  font-size: 12px !important;
+}
+.category-banner-section .category-banner-wrapper .category-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: inherit;
+  margin-bottom: 5px;
+}
+.category-banner-section .category-banner-wrapper .category-title span {
+  font-weight: 400;
+  color: #666;
+}
+.category-banner-section .category-banner-wrapper .category-content.read-more {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.category-banner-section .category-banner-wrapper .category-content p {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1e1e1e;
+}
+.category-banner-section .category-banner-wrapper .toggle-category-content-btn {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit;
+  text-decoration: underline;
+  letter-spacing: 0.15px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.category-banner-section .category-banner-wrapper .category-links-wrapper {
+  margin-top: 20px;
+}
+.category-banner-section .category-banner-wrapper .category-links-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.category-banner-section .category-banner-wrapper .category-links-wrapper ul li {
+  display: inline-block;
+}
+.category-banner-section .category-banner-wrapper .category-links-wrapper ul li a {
+  display: inline-block;
+  border-radius: 5px;
+  line-height: 14px;
+  background-color: #fff;
+  letter-spacing: 0;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  text-transform: none;
+  margin: 0 4px 8px 0;
+  transition: all 0.3s ease-in-out;
+}
+.category-banner-section .category-banner-wrapper .category-links-wrapper ul li a:hover {
+  border-color: var(--uk-blue);
+  color: #fff;
+  background-color: #163f85;
+}
+
+@media (max-width: 992px) {
+  .category-banner-section {
+    margin-bottom: 20px;
+  }
+  .category-banner-section .category-banner-wrapper {
+    padding: 10px 15px 15px;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper {
+    position: relative;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper::before, .category-banner-section .category-banner-wrapper .category-links-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; /* Width of the shadow */
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), transparent);
+    opacity: 0;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+    opacity: 0;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper.show-right-shadow::after {
+    opacity: 1;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper.show-left-shadow::before {
+    opacity: 1;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper ul {
+    white-space: nowrap;
+    overflow: auto;
+    width: 100%;
+  }
+  .category-banner-section .category-banner-wrapper .category-links-wrapper ul li a {
+    margin-bottom: 0;
+  }
+}
+.cat-tooltip {
+  position: relative;
+  display: inline-block;
+}
+.cat-tooltip .cat-tooltip__content {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #202020;
+  color: #fff;
+  border-radius: 5px;
+}
+.cat-tooltip .cat-tooltip__content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #000;
+  border-color: #202020 transparent transparent transparent;
+  pointer-events: none;
+}
+.cat-tooltip:not(:hover) .cat-tooltip__content {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
