@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Popup</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <input type="search" name="" id="dummy-search" placeholder="Search here...">
+
+    <!-- SEARCH POPUP UI -->
+    <div class="search-modal-overlay"></div>
+    <div class="search-modal-wrapper">
+        <div class="search-modal-header">
+            <div class="search-modal-logo">
+                <a href="#">
+                    <img src="https://zenc.uksoccershop.com/includes/templates/template2024/images/template2024/header-logo.png"
+                        alt="">
+                </a>
+            </div>
+            <button type="button" class="search-modal-close">
+                <i class="bi bi-x"></i>
+            </button>
+        </div>
+        <div class="search-modal-body">
+            <div class="search-bar-area">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search for product..." />
+                    <button type="button" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-result-area">
+                <div class="search-suggestion-area">
+                    <div class="search-mobile-suggestion">
+                        <h4 class="search-title">Suggestion</h4>
+                        <ul>
+                            <li>
+                                <div class="skeleton-list-item type-1 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-2 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-3 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-4 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-5 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-6 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-7 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-8 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-5 skeleton-loading"></div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#">Arsenal</a>
+                            </li>
+                            <li>
+                                <a href="#">Kids Arsenal</a>
+                            </li>
+                            <li>
+                                <a href="#">Arsenal Kids</a>
+                            </li>
+                            <li>
+                                <a href="#">Arsenal Shorts</a>
+                            </li>
+                            <li>
+                                <a href="#">2014-2015 Arsenal Cup Socks</a>
+                            </li>
+                            <li>
+                                <a href="#">1990-1992 Arsenal Home Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">2011-2012 Arsenal Home Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">2016-2017 Arsenal Away Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">2019-2020 Arsenal Home Shirt</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-desktop-suggestion">
+                        <h4 class="search-title">Suggestion</h4>
+                        <ul>
+                            <li>
+                                <div class="skeleton-list-item type-1 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-2 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-3 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-4 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-5 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-6 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-7 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-8 skeleton-loading"></div>
+                            </li>
+                            <li>
+                                <div class="skeleton-list-item type-5 skeleton-loading"></div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#" data-show-result="1">Arsenal</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="2">Kids Arsenal</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="3">Arsenal Kids</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="4">Arsenal Shorts</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="5">2014-2015 Arsenal Cup Socks</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="6">1990-1992 Arsenal Home Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="7">2011-2012 Arsenal Home Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="8">2016-2017 Arsenal Away Shirt</a>
+                            </li>
+                            <li>
+                                <a href="#" data-show-result="9">2019-2020 Arsenal Home Shirt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search-products-area">
+                    <div class="search-filter-area">
+                        <ul>
+                            <li class="only-dektop">
+                                <a href="#" class="active">A to Z</a>
+                            </li>
+                            <li>
+                                <a href="#">Best Seller</a>
+                            </li>
+                            <li>
+                                <a href="#">New Arrivals</a>
+                            </li>
+                            <li>
+                                <a href="#">Lowest Price</a>
+                            </li>
+                            <li>
+                                <a href="#">Highest Price</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-listing-area">
+                        <ul class="skeleton-card-grid">
+                            <li>
+                                <div class="search-skeleton-card">
+                                    <div class="search-skeleton-card-image skeleton-loading"></div>
+                                    <div class="search-skeleton-card-content">
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-price skeleton-loading"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-skeleton-card">
+                                    <div class="search-skeleton-card-image skeleton-loading"></div>
+                                    <div class="search-skeleton-card-content">
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-price skeleton-loading"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-skeleton-card">
+                                    <div class="search-skeleton-card-image skeleton-loading"></div>
+                                    <div class="search-skeleton-card-content">
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-price skeleton-loading"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-skeleton-card">
+                                    <div class="search-skeleton-card-image skeleton-loading"></div>
+                                    <div class="search-skeleton-card-content">
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-price skeleton-loading"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-skeleton-card">
+                                    <div class="search-skeleton-card-image skeleton-loading"></div>
+                                    <div class="search-skeleton-card-content">
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-price skeleton-loading"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-skeleton-card">
+                                    <div class="search-skeleton-card-image skeleton-loading"></div>
+                                    <div class="search-skeleton-card-content">
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-title skeleton-loading"></div>
+                                        <div class="search-skeleton-card-price skeleton-loading"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="results-container show" data-result-id="1">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1686656994_man-utd-2023-2024-dna-graphic-football-tee-black.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1715899090_england-2024-2025-nike-football-t-shirt-navy.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1715771794_romania-2024-2025-football-presentation-s-s-t-shirt-navy.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re-your-name-10-1718894953.png">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re-the-invincibles-49-unbeaten-t-shirt-red-campbell-23-1633698228.png">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="2">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="3">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="4">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="5">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="6">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1710972980_spain-2024-2025-home-football-shirt.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="7">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="8">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="results-container" data-result-id="9">
+                            <ul>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="search-box-card">
+                                        <div class="search-box-image">
+                                            <img
+                                                src="https://cdn1.uksoccershop.com/images/re_1711618842_arsenal-2016-2017-puma-away-long-sleeve-football-kit.jpg">
+                                        </div>
+                                        <div class="search-box-card-content">
+                                            <p class="search-box-card-title">2023-2024 Arsenal Home Shirt (Kids)</p>
+                                            <p class="search-box-price">£64.99</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search-box-view-all">View All
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SEARCH POPUP UI -->
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="index.js"></script>
+
+</html>
