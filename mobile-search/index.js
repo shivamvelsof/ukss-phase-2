@@ -8,7 +8,7 @@ addEventListener("DOMContentLoaded", () => {
   let currentPlaceholderIndex = 0;
   let currentCharIndex = 0;
   let typingDelay = 50;
-  let erasingDelay = 100;
+  let erasingDelay = 50;
   let newPlaceholderDelay = 2000;
   let cursorVisible = true;
 
@@ -49,7 +49,7 @@ addEventListener("DOMContentLoaded", () => {
       cursorVisible = false;
       setTimeout(() => {
         cursorVisible = true;
-        setInterval(toggleCursor, 500); // Start blinking cursor after typing
+        // setInterval(toggleCursor, 500); // Start blinking cursor after typing
       }, newPlaceholderDelay);
       setTimeout(erasePlaceholder, newPlaceholderDelay);
     }
@@ -81,6 +81,6 @@ addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  setInterval(toggleCursor, 500); // Initial cursor blink
+  // setInterval(toggleCursor, 500); // Initial cursor blink
   setTimeout(typePlaceholder, newPlaceholderDelay);
 });
