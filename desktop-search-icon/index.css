@@ -1,0 +1,15 @@
+.searchbar-form .search-key-box {
+  position: relative;
+}
+.searchbar-form .search-key-box .mobile-header-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: rgb(197, 197, 197);
+  z-index: 1;
+}
+.searchbar-form .search-key-box .textSearch_1 {
+  padding-left: 32px;
+}/*# sourceMappingURL=index.css.map */
