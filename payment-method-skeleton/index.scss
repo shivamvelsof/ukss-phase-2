@@ -1,0 +1,32 @@
+.skeleton-loading {
+  position: relative;
+  background-color: #e2e2e2;
+  overflow: hidden;
+}
+
+.skeleton-loading::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.649),
+    transparent
+  );
+  animation: loading 0.8s infinite;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.payment-options-loader {
+  height: 55px;
+  border-radius: 5px;
+}
