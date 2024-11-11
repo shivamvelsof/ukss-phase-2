@@ -91,13 +91,58 @@
   }
 }
 /* /FLOATING LABEL */
-
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .suggestion-card {
   background-color: #fff;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.0509803922);
   margin-bottom: 15px;
+  animation: horizontal-shaking 0.3s linear;
+  background-color: #fbf5e3;
+  position: relative;
+  overflow: hidden;
+  &.ready-to-add {
+    background-color: #e4f1e7;
+  }
+  &.shake-card {
+    animation: horizontal-shaking 0.3s linear infinite;
+  }
+  .ribbon {
+    position: absolute;
+    top: 46px;
+    left: -24px;
+    background-color: #e31d2b;
+    color: white;
+    font-weight: 500;
+    font-size: 8px;
+    padding: 2px 0;
+    line-height: 12px;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+  }
   .suggestion-card__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -112,75 +157,58 @@
         display: block;
         object-fit: contain;
         object-position: center;
+        mix-blend-mode: multiply;
       }
     }
     .sc-content {
       flex: 1;
-      padding: 0 10px;
+      padding-left: 10px;
       .sc-product-title {
-        font-size: 12px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         text-transform: unset !important;
         margin-bottom: 10px;
         line-height: 18px;
         display: block;
       }
       .price-area {
-        .price {
-          font-size: 14px;
-          font-weight: 600;
-          color: #1e1e1e;
-          margin-right: 5px;
-        }
+        text-align: right;
         .old-price {
           font-size: 12px;
           font-weight: 500;
           color: #a5a5a5;
           text-decoration: line-through;
+          margin-right: 5px;
+        }
+        .price {
+          font-size: 14px;
+          font-weight: 600;
+          color: #1e1e1e;
         }
       }
     }
-    .sc-add-btn {
-      .add-sc-btn {
-        color: #fff;
-        background-color: var(--uk-red);
-        background-color: #1e1e1e;
-        border: none;
-        padding: 9px 27px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: 500;
-        text-transform: uppercase;
-        font-size: 10px;
-        line-height: 13px;
-      }
-    }
   }
-  .sc-select-size-wrapper {
-    width: calc(100% - 80px);
-    margin-left: auto;
-    max-height: 0px;
-    transition: 0.25s ease-in-out;
-    overflow: hidden;
-    &.show-size-dd {
-      max-height: 1000px;
-    }
+  .sc-action-wrapper {
+    margin-top: 10px;
+    display: flex;
     .sc-select-size-content {
-      padding: 5px 10px;
+      flex: 1;
+      padding: 0 10px 0 0;
       position: relative;
       .label-text {
         position: absolute;
         top: 8px;
         top: 50%;
-        left: 15px;
+        left: 6px;
         font-size: 12px;
         font-weight: 500;
         transform: translateY(-50%);
+        pointer-events: none;
       }
       select {
         display: block;
         width: 100%;
-        padding: 5px;
+        padding: 8px 5px;
         border: none;
         outline: none;
         background-color: initial;
@@ -198,12 +226,33 @@
         appearance: none;
         cursor: pointer;
         border: 1px solid #c9c9c9;
-        max-width: 230px;
         background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>');
         background-repeat: no-repeat;
         background-size: 12px;
         background-position: right 5px center;
       }
+      &.select-error {
+        animation: horizontal-shaking 0.3s ease-in-out;
+        .label-text {
+          color: #dc3545;
+        }
+        select {
+          border-color: #dc3545;
+        }
+      }
+    }
+    .add-sc-btn {
+      color: #fff;
+      background-color: var(--uk-red);
+      background-color: #1e1e1e;
+      border: none;
+      padding: 9px 27px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 10px;
+      line-height: 13px;
     }
   }
 }

@@ -102,12 +102,58 @@
 }
 
 /* /FLOATING LABEL */
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .suggestion-card {
   background-color: #fff;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.0509803922);
   margin-bottom: 15px;
+  animation: horizontal-shaking 0.3s linear;
+  background-color: #fbf5e3;
+  position: relative;
+  overflow: hidden;
+}
+.suggestion-card.ready-to-add {
+  background-color: #e4f1e7;
+}
+.suggestion-card.shake-card {
+  animation: horizontal-shaking 0.3s linear infinite;
+}
+.suggestion-card .ribbon {
+  position: absolute;
+  top: 46px;
+  left: -24px;
+  background-color: #e31d2b;
+  color: white;
+  font-weight: 500;
+  font-size: 8px;
+  padding: 2px 0;
+  line-height: 12px;
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+  z-index: 1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .suggestion-card .suggestion-card__wrapper {
   display: flex;
@@ -127,71 +173,58 @@
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+  mix-blend-mode: multiply;
 }
 .suggestion-card .suggestion-card__wrapper .sc-content {
   flex: 1;
-  padding: 0 10px;
+  padding-left: 10px;
 }
 .suggestion-card .suggestion-card__wrapper .sc-content .sc-product-title {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   text-transform: unset !important;
   margin-bottom: 10px;
   line-height: 18px;
   display: block;
 }
-.suggestion-card .suggestion-card__wrapper .sc-content .price-area .price {
-  font-size: 14px;
-  font-weight: 600;
-  color: #1e1e1e;
-  margin-right: 5px;
+.suggestion-card .suggestion-card__wrapper .sc-content .price-area {
+  text-align: right;
 }
 .suggestion-card .suggestion-card__wrapper .sc-content .price-area .old-price {
   font-size: 12px;
   font-weight: 500;
   color: #a5a5a5;
   text-decoration: line-through;
+  margin-right: 5px;
 }
-.suggestion-card .suggestion-card__wrapper .sc-add-btn .add-sc-btn {
-  color: #fff;
-  background-color: var(--uk-red);
-  background-color: #1e1e1e;
-  border: none;
-  padding: 9px 27px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 13px;
+.suggestion-card .suggestion-card__wrapper .sc-content .price-area .price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e1e;
 }
-.suggestion-card .sc-select-size-wrapper {
-  width: calc(100% - 80px);
-  margin-left: auto;
-  max-height: 0px;
-  transition: 0.25s ease-in-out;
-  overflow: hidden;
+.suggestion-card .sc-action-wrapper {
+  margin-top: 10px;
+  display: flex;
 }
-.suggestion-card .sc-select-size-wrapper.show-size-dd {
-  max-height: 1000px;
-}
-.suggestion-card .sc-select-size-wrapper .sc-select-size-content {
-  padding: 5px 10px;
+.suggestion-card .sc-action-wrapper .sc-select-size-content {
+  flex: 1;
+  padding: 0 10px 0 0;
   position: relative;
 }
-.suggestion-card .sc-select-size-wrapper .sc-select-size-content .label-text {
+.suggestion-card .sc-action-wrapper .sc-select-size-content .label-text {
   position: absolute;
   top: 8px;
   top: 50%;
-  left: 15px;
+  left: 6px;
   font-size: 12px;
   font-weight: 500;
   transform: translateY(-50%);
+  pointer-events: none;
 }
-.suggestion-card .sc-select-size-wrapper .sc-select-size-content select {
+.suggestion-card .sc-action-wrapper .sc-select-size-content select {
   display: block;
   width: 100%;
-  padding: 5px;
+  padding: 8px 5px;
   border: none;
   outline: none;
   background-color: initial;
@@ -209,11 +242,32 @@
   appearance: none;
   cursor: pointer;
   border: 1px solid #c9c9c9;
-  max-width: 230px;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>');
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: right 5px center;
+}
+.suggestion-card .sc-action-wrapper .sc-select-size-content.select-error {
+  animation: horizontal-shaking 0.3s ease-in-out;
+}
+.suggestion-card .sc-action-wrapper .sc-select-size-content.select-error .label-text {
+  color: #dc3545;
+}
+.suggestion-card .sc-action-wrapper .sc-select-size-content.select-error select {
+  border-color: #dc3545;
+}
+.suggestion-card .sc-action-wrapper .add-sc-btn {
+  color: #fff;
+  background-color: var(--uk-red);
+  background-color: #1e1e1e;
+  border: none;
+  padding: 9px 27px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 13px;
 }
 
 .sidebar-cart-footer .message-area {
