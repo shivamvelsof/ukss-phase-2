@@ -1,3 +1,13 @@
+function handleReadMoreBtn() {
+  const categoryContent = document.querySelector(".category-content");
+
+  if (categoryContent.scrollHeight > categoryContent.clientHeight) {
+    $('.toggle-category-content-btn').removeClass('hide');
+  } else {
+    $('.toggle-category-content-btn').addClass('hide');
+  }
+}
+
 $(document).ready(function () {
   const scrollableContainer = document.querySelector(
     ".category-banner-tags-list"
@@ -5,6 +15,8 @@ $(document).ready(function () {
   const scrollableContainerWrapper = document.querySelector(
     ".category-banner-tags-list-wrapper"
   );
+
+  handleReadMoreBtn()
 
   // function toggleShadows() {
   //   const { scrollLeft, scrollWidth, clientWidth } = scrollableContainer;

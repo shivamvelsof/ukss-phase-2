@@ -487,6 +487,14 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
   overflow: hidden;
 }
+
+.circular-card.active .circular-card__image {
+  box-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000,
+    0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000,
+    0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000,
+    0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000,
+    0px 0px 1px #000 !important;
+}
 .circular-card .circular-card__image .scrollable-selector-img {
   padding: 10px;
   background-color: #fff;
