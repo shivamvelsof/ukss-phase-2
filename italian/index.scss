@@ -1,17 +1,94 @@
-.circular-cat-swiper {
-  margin-bottom: 40px;
-  .circular-card {
-    .circular-card__title {
-      min-height: 35px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
+.top-cats-wrapper .top-cats-action-area .top-cats-toggle {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.league-modal-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  &:not(.active-overlay) {
+    display: none !important;
+  }
+}
+.leagues-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: calc(100% - 20px);
+  max-width: 800px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+  &:not(.active-modal) {
+    display: none !important;
+  }
+  .leagues-modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    .leagues-modal-header {
+      padding: 12px;
+      position: relative;
+      border-radius: 10px 10px 0 0;
+      background-color: #fff;
+      border-bottom: 1px solid #f5f5f5;
+      h4 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .leagues-modal-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #f5f5f5;
+        border: none;
+        &:hover {
+          background-color: #e5e5e5;
+        }
+      }
+    }
+    .leagues-modal-body {
+      flex: 1;
+      overflow-y: auto;
+      .leagues-modal-content {
+        background-color: #fff;
+        height: 100%;
+        padding: 12px;
+        border-radius: 0 0 12px 12px;
+      }
     }
   }
-  .circular-cat-swiper-scrollbar {
-    position: static;
+}
+
+.leagues-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 16.6%);
+  .leagues-modal-grid__item {
+    margin-bottom: 10px;
+    .circular-card {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -24,4 +101,41 @@
   padding: 10px;
   background-color: #fff;
   border-radius: 0px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .leagues-modal-grid {
+    grid-template-columns: repeat(5, 20%);
+  }
+}
+
+@media (max-width: 565px) {
+  .leagues-modal-grid {
+    grid-template-columns: repeat(4, 25%);
+  }
+  .responsive-banner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .leagues-modal-grid {
+    grid-template-columns: repeat(3, 33.33%);
+  }
+}
+
+@media (max-width: 320px) {
+  .leagues-modal-grid {
+    grid-template-columns: repeat(2, 50%);
+  }
 }
