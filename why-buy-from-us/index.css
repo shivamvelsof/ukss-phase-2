@@ -1,0 +1,81 @@
+.why-buy-section {
+  background-color: #f5f5f8;
+  background-image: url("why-bg.png");
+  background-size: 700px 700px;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+.why-buy-section .why-buy-wrapper {
+  padding: 30px 15px;
+}
+.why-buy-section .why-buy-wrapper .why-buy-heading {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.why-buy-section .why-buy-wrapper .why-buy-list-wrapper .why-buy-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+}
+.why-buy-section .why-buy-wrapper .why-buy-list-wrapper .why-buy-list li {
+  padding: 10px;
+}
+.why-buy-section .why-buy-wrapper .why__learn-more-btn {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 20px;
+  margin: 25px auto 0;
+  border-radius: 10px;
+  background-color: #163f85;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.why-buy-section .why-buy-wrapper .why__learn-more-btn:hover {
+  background-color: hsl(218, 72%, 27%);
+  color: #fff;
+}
+
+.why-buy-swiper {
+  position: static;
+}
+
+.why-buy-card {
+  text-align: center;
+  color: #1e1e1e;
+}
+.why-buy-card img {
+  display: block;
+  width: 60px;
+  margin: 0 auto 10px;
+}
+.why-buy-card .why-buy-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.why-buy-card .why-buy-para {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ships-method-list span {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 565px) {
+  .why-buy-section {
+    margin-left: -10px;
+    margin-right: -10px;
+    border-radius: 0;
+  }
+  .why-buy-section .why-buy-wrapper .why-buy-heading {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=index.css.map */
