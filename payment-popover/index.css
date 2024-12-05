@@ -1,0 +1,46 @@
+.klarna-images {
+  white-space: nowrap;
+}
+.klarna-images img {
+  margin-left: -12px;
+  display: inline-block;
+  height: 20px;
+  background-color: #fff;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+.klarna-popup {
+  position: relative;
+}
+.klarna-popup .klarna-popup-body {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.klarna-popup .klarna-popup-body img {
+  display: inline-block;
+  margin: 5px 2px;
+  border-radius: 3px;
+  height: 20px;
+}
+.klarna-popup .klarna-popup-body img.klarna-popup {
+  width: 40px;
+}
+.klarna-popup .klarna-popup-body::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 25px;
+  transform: translateX(50%);
+  border: 5px solid transparent;
+  border-top-color: hsla(0, 0%, 0%, 0.9);
+}
+.klarna-popup:not(:hover) .klarna-popup-body {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
