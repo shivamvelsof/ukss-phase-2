@@ -28,6 +28,25 @@
   font-weight: 400;
 }
 
+.prod-listing-wrapper .section-heading {
+  margin-bottom: 15px;
+}
+.prod-listing-wrapper .tab-products {
+  padding: 0 10px;
+  margin: 15px 0;
+}
+.prod-listing-wrapper .tab-products .tab-products-wrapper {
+  background-color: #f5f5f8;
+}
+.prod-listing-wrapper .tab-products .tab-products-wrapper .tab-option-btn {
+  background-color: #fff;
+  border: 1px solid #efefef;
+}
+
+.ukss-prod-card {
+  background-color: #fff;
+}
+
 .why-buy-section {
   background-color: #f5f5f8;
   background-image: url("why-bg.png");
@@ -93,9 +112,9 @@
 }
 .filters-area .filters-wrapper .filter-option-list li .filter-opt {
   display: block;
-  background-color: #e3e3e3;
+  background-color: #efefef;
   color: #000;
-  border: 1px solid #dadada;
+  border: 1px solid #929292;
   padding: 10px 35px 10px 20px;
   font-size: 16px;
   font-weight: 600;
