@@ -1,4 +1,68 @@
+function handleReadMoreBtn() {
+  const categoryContent = document.querySelector(".category-content");
+  if (categoryContent.scrollHeight > categoryContent.clientHeight) {
+    $(".toggle-category-content-btn").removeClass("hide");
+  } else {
+    $(".toggle-category-content-btn").addClass("hide");
+  }
+}
+
 $(document).ready(function () {
+  function handleTabsArrow() {
+    const scrollWidth = this.scrollWidth;
+    const width = this.clientWidth;
+    const left = this.scrollLeft;
+    const right = scrollWidth - width - left;
+    if (left < 1) {
+      $(this)
+        .parents(".tab-option-list-wrapper")
+        .find(".tab-option-left-area")
+        .addClass("hide");
+    } else {
+      $(this)
+        .parents(".tab-option-list-wrapper")
+        .find(".tab-option-left-area")
+        .removeClass("hide");
+    }
+    if (right < 1) {
+      $(this)
+        .parents(".tab-option-list-wrapper")
+        .find(".tab-option-right-area")
+        .addClass("hide");
+    } else {
+      $(this)
+        .parents(".tab-option-list-wrapper")
+        .find(".tab-option-right-area")
+        .removeClass("hide");
+    }
+  }
+  $(".tab-options-list").each(handleTabsArrow);
+  window.addEventListener("resize", function () {
+    $(".tab-options-list").each(handleTabsArrow);
+  });
+  $(".tab-options-list").on("scroll", handleTabsArrow);
+  $(".tab-option-left").click(function () {
+    $(this)
+      .parents(".tab-option-list-wrapper")
+      .find(".tab-options-list")
+      .animate({
+        scrollLeft: "-=200",
+      });
+  });
+  $(".tab-option-right").click(function () {
+    $(this)
+      .parents(".tab-option-list-wrapper")
+      .find(".tab-options-list")
+      .animate({
+        scrollLeft: "+=200",
+      });
+  });
+  $(".category-banner-slider .circular-card").click(function (e) {
+    e.preventDefault();
+    $(".category-banner-slider .circular-card").removeClass("active");
+    $(this).addClass("active");
+  });
+  handleReadMoreBtn();
   function updateDropdownPosition($button, $dropdown, $megaDropdown) {
     const buttonRect = $button[0].getBoundingClientRect();
     const dropdownWidth = $dropdown.outerWidth();

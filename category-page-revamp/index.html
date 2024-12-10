@@ -3517,14 +3517,14 @@
                                 international delivery.
                             </p>
                         </div>
-                        <button type="button" class="toggle-category-content-btn">Read more</button>
+                        <button type="button" class="toggle-category-content-btn hide">Read more</button>
                         <div class="category-banner-slider">
                             <div class="swiper category-banner-carousel">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="https://www.uksoccershop.com/specials/cheap-football-shirts"
-                                            class="circular-card">
+                                            class="circular-card active">
                                             <div class="circular-card__image">
                                                 <picture>
                                                     <picture>
@@ -3704,6 +3704,18 @@
                                             <p class="circular-card__title">Hoodies</p>
                                         </a>
                                     </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://www.uksoccershop.com/specials/cheap-football-hoodies"
+                                            class="circular-card">
+                                            <div class="circular-card__image">
+                                                <img width="80" height="80"
+                                                    src="view all icon.png"
+                                                    alt="Hoodies" title=" Hoodies "
+                                                    class="scrollable-selector-img" />
+                                            </div>
+                                            <!-- <p class="circular-card__title">Hoodies</p> -->
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -3735,7 +3747,7 @@
                     </div>
                 </section>
 
-                <section class="tab-products">
+                <section class="tab-products tab-product-bg">
                     <div class="tab-products-wrapper">
                         <!-- BOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
                         <div style='justify-content:start; display: flex;'>
@@ -3749,37 +3761,45 @@
                             </div>
                         </div>
                         <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
-                        <ul class="tab-options-list">
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn active" data-tab-target="bestseller"
-                                    data-additional-value="sort">Home Kit</button>
-                            </li>
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn" data-tab-target="new"
-                                    data-additional-value="sort">Away Kit</button>
-                            </li>
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn" data-tab-target="hero_shirts:=1"
-                                    data-additional-value="filter">Third Kit</button>
-                            </li>
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn" data-tab-target="lprice"
-                                    data-additional-value="sort">Goalkeeper</button>
-                            </li>
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                    data-additional-value="filter">Kids</button>
-                            </li>
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                    data-additional-value="filter">Latest</button>
-                            </li>
-                            <li class="tab-option-item">
-                                <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                    data-additional-value="filter">Hero Shirts</button>
-                            </li>
-                            <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
-                        </ul>
+                         <div class="tab-option-list-wrapper">
+                            <div class="tab-option-left-area hide">
+                                <button type="button" class="tab-option-left"></button>
+                            </div>
+                            <ul class="tab-options-list">
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn active" data-tab-target="bestseller"
+                                        data-additional-value="sort">Home Kit</button>
+                                </li>
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn" data-tab-target="new"
+                                        data-additional-value="sort">Away Kit</button>
+                                </li>
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn" data-tab-target="hero_shirts:=1"
+                                        data-additional-value="filter">Third Kit</button>
+                                </li>
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn" data-tab-target="lprice"
+                                        data-additional-value="sort">Goalkeeper</button>
+                                </li>
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                        data-additional-value="filter">Kids</button>
+                                </li>
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                        data-additional-value="filter">Latest</button>
+                                </li>
+                                <li class="tab-option-item">
+                                    <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                        data-additional-value="filter">Hero Shirts</button>
+                                </li>
+                                <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
+                            </ul>
+                            <div class="tab-option-right-area hide">
+                                <button class="tab-option-right"></button>
+                            </div>
+                         </div>
                         <div class="tab-product-wrapper">
                             <div class="tab-product-item active">
                                 <div class="swiper cat-prod-swiper">
@@ -4089,6 +4109,9 @@
                                             </a>
                                         </div>
                                     </div>
+
+                                    <div class="swiper-button-prev cat-prod-swiper-button-prev"></div>
+                                    <div class="swiper-button-next cat-prod-swiper-button-next"></div>
                                     <div class="swiper-pagination cat-prod-swiper-pagination"></div>
                                 </div>
                             </div>
@@ -4584,37 +4607,45 @@
                                     </div>
                                 </div>
                                 <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
-                                <ul class="tab-options-list">
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn active" data-tab-target="bestseller"
-                                            data-additional-value="sort">Home Kit</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="new"
-                                            data-additional-value="sort">Away Kit</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="hero_shirts:=1"
-                                            data-additional-value="filter">Third Kit</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="lprice"
-                                            data-additional-value="sort">Goalkeeper</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                            data-additional-value="filter">Kids</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                            data-additional-value="filter">Latest</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                            data-additional-value="filter">Hero Shirts</button>
-                                    </li>
-                                    <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
-                                </ul>
+                                <div class="tab-option-list-wrapper">
+                                    <div class="tab-option-left-area hide">
+                                        <button type="button" class="tab-option-left"></button>
+                                    </div>
+                                    <ul class="tab-options-list">
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn active" data-tab-target="bestseller"
+                                                data-additional-value="sort">Home Kit</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="new"
+                                                data-additional-value="sort">Away Kit</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="hero_shirts:=1"
+                                                data-additional-value="filter">Third Kit</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="lprice"
+                                                data-additional-value="sort">Goalkeeper</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                                data-additional-value="filter">Kids</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                                data-additional-value="filter">Latest</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                                data-additional-value="filter">Hero Shirts</button>
+                                        </li>
+                                        <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
+                                    </ul>
+                                    <div class="tab-option-right-area hide">
+                                        <button class="tab-option-right"></button>
+                                    </div>
+                                 </div>
                                 <div class="tab-product-wrapper">
                                     <div class="tab-product-item active">
                                         <div class="swiper cat-prod-swiper">
@@ -4924,6 +4955,8 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                            <div class="swiper-button-prev cat-prod-swiper-button-prev"></div>
+                                            <div class="swiper-button-next cat-prod-swiper-button-next"></div>
                                             <div class="swiper-pagination cat-prod-swiper-pagination"></div>
                                         </div>
                                     </div>
@@ -5377,37 +5410,45 @@
                                     </div>
                                 </div>
                                 <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
-                                <ul class="tab-options-list">
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn active" data-tab-target="bestseller"
-                                            data-additional-value="sort">Home Kit</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="new"
-                                            data-additional-value="sort">Away Kit</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="hero_shirts:=1"
-                                            data-additional-value="filter">Third Kit</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="lprice"
-                                            data-additional-value="sort">Goalkeeper</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                            data-additional-value="filter">Kids</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                            data-additional-value="filter">Latest</button>
-                                    </li>
-                                    <li class="tab-option-item">
-                                        <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
-                                            data-additional-value="filter">Hero Shirts</button>
-                                    </li>
-                                    <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
-                                </ul>
+                                <div class="tab-option-list-wrapper">
+                                    <div class="tab-option-left-area hide">
+                                        <button type="button" class="tab-option-left"></button>
+                                    </div>
+                                    <ul class="tab-options-list">
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn active" data-tab-target="bestseller"
+                                                data-additional-value="sort">Home Kit</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="new"
+                                                data-additional-value="sort">Away Kit</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="hero_shirts:=1"
+                                                data-additional-value="filter">Third Kit</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="lprice"
+                                                data-additional-value="sort">Goalkeeper</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                                data-additional-value="filter">Kids</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                                data-additional-value="filter">Latest</button>
+                                        </li>
+                                        <li class="tab-option-item">
+                                            <button type="button" class="tab-option-btn" data-tab-target="price:<=30"
+                                                data-additional-value="filter">Hero Shirts</button>
+                                        </li>
+                                        <!-- EOC: I have added two new tabs (Under GBP 30 and Hero Shirts ) and removed the A to Z and Highest price sorting tab. BY ADITYA VERMA ON 28-NOVEMBER-2024 PMS: 156354 -->
+                                    </ul>
+                                    <div class="tab-option-right-area hide">
+                                        <button class="tab-option-right"></button>
+                                    </div>
+                                 </div>
                                 <div class="tab-product-wrapper">
                                     <div class="tab-product-item active">
                                         <div class="swiper cat-prod-swiper">
@@ -5717,6 +5758,8 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                            <div class="swiper-button-prev cat-prod-swiper-button-prev"></div>
+                                            <div class="swiper-button-next cat-prod-swiper-button-next"></div>
                                             <div class="swiper-pagination cat-prod-swiper-pagination"></div>
                                         </div>
                                     </div>
