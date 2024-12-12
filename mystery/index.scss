@@ -1,0 +1,114 @@
+.founders-message-section {
+  .founders-message-area {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+  @media (max-width: 565px) {
+    padding: 10px 0;
+    .founders-message-area {
+      margin-left: -10px;
+      margin-right: -10px;
+      img {
+        border-radius: 0px;
+        //     width: 100%;
+        //     display: block;
+        //     height: auto;
+      }
+    }
+  }
+}
+
+.order-work-section {
+  margin-top: 40px;
+  .order-work-area {
+    .order-work-header {
+      color: #1e1e1e;
+      margin-bottom: 15px;
+      h4 {
+        font-size: 28px;
+        font-weight: 700;
+        font-family: var(--font-family);
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 14px;
+        font-family: var(--font-family);
+        font-weight: 400;
+      }
+    }
+    .order-work-content {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .order-work-area {
+      .order-work-content {
+        ul {
+          grid-template-columns: repeat(2, 50%);
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .order-work-area {
+      .order-work-header {
+        h4 {
+          font-size: 22px;
+        }
+      }
+      .order-work-content {
+        ul {
+          overflow: auto;
+          grid-template-columns: repeat(4, 85%);
+        }
+      }
+    }
+  }
+}
+
+.order-work-card {
+  padding: 10px;
+  .ow-img {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+  .ow-content {
+    padding: 10px 0;
+    .ow-step-title {
+      color: #f80012;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .ow-title {
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .ow-subtitle {
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .ow-para {
+      font-size: 14px;
+      font-weight: 400;
+      color: #767676;
+    }
+  }
+}
