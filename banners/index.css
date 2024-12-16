@@ -1,0 +1,43 @@
+.top-ukss-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.top-ukss-banners li {
+  padding: 5px;
+}
+.top-ukss-banners li a {
+  display: block;
+}
+.top-ukss-banners li a img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 565px) {
+  .top-ukss-banners {
+    grid-template-columns: 100%;
+  }
+  .top-ukss-banners li a img {
+    border-radius: 0px;
+  }
+}
+
+.top-ukss-banner-item {
+  display: block;
+}
+.top-ukss-banner-item img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 565px) {
+  .top-ukss-banner-item img {
+    border-radius: 0px;
+  }
+}
+
+#top-ukss-banner .swiper-pagination {
+  position: static;
+}/*# sourceMappingURL=index.css.map */
