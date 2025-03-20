@@ -3,6 +3,36 @@
 
 <head>
 
+    <link rel="preload" href="https://cdn2.uksoccershop.com/includes/templates/template2024/css/template2024/material_symbols_outlined.woff2" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn2.uksoccershop.com/includes/templates/template2024/css/template2024/material_icons.woff2" as="font" type="font/woff" crossorigin="anonymous">
+
+    <style>
+                    @font-face {
+        font-family: "Material Symbols Outlined";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://cdn2.uksoccershop.com/includes/templates/template2024/css/template2024/material_symbols_outlined.woff2") format("woff2");
+        }
+        @font-face {
+        font-family: "Material Icons";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://cdn2.uksoccershop.com/includes/templates/template2024/css/template2024/material_icons.woff2") format("woff2");
+        }
+    </style>
+    <style id="mui-icons-loader">
+        .material-symbols-outlined,
+        .material-icons {
+            opacity: 0 !important;
+        }
+    </style>
+    <script>
+                    document.fonts.ready.then(() => {
+            document.querySelector("#mui-icons-loader").remove();
+        });
+    </script>
+
+
     <script src="https://js.stripe.com/v3/"></script>
 
 

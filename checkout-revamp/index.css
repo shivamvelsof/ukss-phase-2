@@ -1,0 +1,17 @@
+div.l-page {
+  background-color: #fff !important;
+}
+
+#checkout_header {
+  border-bottom: 0px;
+}
+
+.uk-form-wizard,
+#secure_checkout_text {
+  display: none;
+}
+
+.l-page main,
+.l-page > header {
+  max-width: 1150px !important;
+}/*# sourceMappingURL=index.css.map */

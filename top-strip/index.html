@@ -623,7 +623,7 @@
                                 <div class="newNav-cart nav-cart-box checkout_div">
                                     <div id="nav-cart-anchor" class="UserDropDowns_iconContainer">
                                         <div class="UserDropDowns_cartContainer">
-                                            <div id="nav-cart-num" class="UserDropDowns_miniCartQty">4</div>
+                                            <div id="nav-cart-num" class="UserDropDowns_miniCartQty">2</div>
                                             <svg class="UserDropDowns_icon_06" width="22" height="21"
                                                 viewBox="0 0 24 24" stroke="#2F3337" fill="#2F3337">
                                                 <title>Cart Empty</title>
@@ -695,7 +695,7 @@
                                             <!-- Count Badge -->
                                             <div id="cart-count"
                                                 style="position: absolute; top: -8px; right: -8px; background-color: red; color: white; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-size: 12px;">
-                                                4 </div>
+                                                2 </div>
                                         </a>
                                     </div>
                                 </div>
@@ -2505,6 +2505,8 @@
             // IF sortting option if selected
             if (sort_option) {
                 req_parameter += `&bsort=${sort_option}`;
+            } else if (URL_sort) {
+                req_parameter += `&bsort=${URL_sort}`;
             }
 
             // fetching the current page from URL
@@ -2676,7 +2678,7 @@
                     if (sort_option) {
                         updateOrRemoveParam('bsort', sort_option);
                     } else if (URL_sort) {
-                        updateOrRemoveParam('bsort', '');
+                        updateOrRemoveParam('bsort', URL_sort);
                     }
 
                     // Remove any other empty parameters already in the URL
@@ -2731,11 +2733,6 @@
             //BOC: This code is used to fetch the current applied filters in case of Desktop view.
             let req_parameter = '';
 
-            //BoC - Fetch Landing Page ID in case of filter to pass to the function to generate page link for pagination - by Harsh Agarwal on 11-Dec-2023 - PMS Ticket ID - #156629
-            var lp_url = $("#lp_url").val();
-            req_parameter += "&lp_url=" + lp_url;
-            //EoC - Fetch Landing Page ID in case of filter to pass to the function to generate page link for pagination - by Harsh Agarwal on 11-Dec-2023 - PMS Ticket ID - #156629
-
             // This is the condition that is used to fetch data on a particular Landing page.
             req_parameter += "&landing_page_condition=" + encodeURIComponent(filter_param);
 
@@ -2768,6 +2765,11 @@
             // In this case, append the new sorting parameter to the request.
             if (sort_param != '') {
                 req_parameter += `&bsort=${sort_param}`;
+            } else {
+                // If `sort_param` is empty, handle the case where sorting is already applied or needs to persist.
+                if (URL_sort) {
+                    req_parameter += `&bsort=${URL_sort}`;
+                }
             }
 
             // Check if the `current_page` variable has a value (indicating the user is navigating through pages).
@@ -2951,7 +2953,7 @@
                         // If `sort_param` is empty, check if there is an existing sorting parameter in the URL.
                         // If found, retain the existing sorting parameter in the request.
                         if (URL_sort_param) {
-                            updateOrRemoveParam('bsort', '');
+                            updateOrRemoveParam('bsort', URL_sort_param);
                         }
                     }
 
@@ -2963,7 +2965,7 @@
                         // If `current_page` is empty, check if there is an existing page parameter in the URL.
                         // If found, retain the existing page number in the request.
                         if (URL_page_param) {
-                            updateOrRemoveParam('page', '');
+                            updateOrRemoveParam('page', URL_page_param);
                         }
                     }
 
@@ -3799,56 +3801,16 @@
                 </section>
 
                 <div class="home-banner">
-                    <!-- <ul class="top-ukss-banners">
-                        <li>
-                            <a href="#">
-                                <img src="ukss-new-banner01.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="ukss-new-banner02.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="ukss-new-banner03.png" alt="">
-                            </a>
-                        </li>
-                    </ul> -->
-                    <!-- Slider main container -->
-                    <div class="swiper" id="top-ukss-banner">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="top-ukss-banner-item">
-                                    <img src="Shop-Football-Shirt.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="top-ukss-banner-item">
-                                    <img src="UKSS-Mystery-Box-Banner-new.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="top-ukss-banner-item">
-                                    <img src="SHOP-PERSONALIZED-PRODUCTS.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
                     <!--<ul class="slides">-->
                     <!--<li>-->
-                    <!-- <div class="top-ukssBanner">
+                    <div class="top-ukssBanner">
                         <a href="https://www.uksoccershop.com/cyber-monday-deals-c-3719.html"
                             class="desktop-homepage-banner">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="https://cdn2.uksoccershop.com/webadmin/images/slider/Weekend-Mega-Deal-Banner-Desktop-1340x400.webp" />
+                                    srcset="https://cdn2.uksoccershop.com/webadmin/images/slider/Cyber-Monday-Deal-Banner-Desktop-1340x400.webp" />
                                 <img width="1340" height="400"
-                                    src="https://cdn2.uksoccershop.com/webadmin/images/slider/Weekend-Mega-Deal-Banner-Desktop-1340x400.jpg"
+                                    src="https://cdn2.uksoccershop.com/webadmin/images/slider/Cyber-Monday-Deal-Banner-Desktop-1340x400.jpg"
                                     alt="2024/25 Kits" title=" 2024/25 Kits " fetchpriority="high" />
                             </picture>
                         </a>
@@ -3857,14 +3819,14 @@
                             class="mobile-homepage-banner">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="https://cdn2.uksoccershop.com/webadmin/images/slider/Weekend-Mega-Deal-Banner-Mobile_675b6781768cd-433x503.webp" />
+                                    srcset="https://cdn2.uksoccershop.com/webadmin/images/slider/Cyber-Monday-Deal-Banner-Mobile_67560c4a29666-433x503.webp" />
                                 <img width="433" height="503"
-                                    src="https://cdn2.uksoccershop.com/webadmin/images/slider/Weekend-Mega-Deal-Banner-Mobile_675b6781768cd-433x503.jpg"
+                                    src="https://cdn2.uksoccershop.com/webadmin/images/slider/Cyber-Monday-Deal-Banner-Mobile_67560c4a29666-433x503.jpg"
                                     alt="2024/25 Kits" title=" 2024/25 Kits " fetchpriority="high" />
                             </picture>
                         </a>
 
-                    </div> -->
+                    </div>
                     <!--</li>-->
                     <!--</ul>-->
                 </div>
@@ -3923,7 +3885,7 @@
                                     <div class="swiper-slide">
                                         <a href="https://www.uksoccershop.com/bestsellers" class="category-card">
                                             <img width="275" height="275"
-                                                src="Bestsellers.png"
+                                                src=" https://cdn2.uksoccershop.com/includes/templates/template2024/images/template2024/homepage/besesellers_new.jpg"
                                                 class="lazy ukss-prod-img" alt="BESTSELLERS" title=" BESTSELLERS "
                                                 style="display: block;">
                                             <div class="title-area">
@@ -3935,7 +3897,7 @@
                                         <a href="https://www.uksoccershop.com/football-shirts/vintage"
                                             class="category-card">
                                             <img width="275" height="275"
-                                                src="Vintage Shirts.png"
+                                                src=" https://cdn2.uksoccershop.com/includes/templates/template2024/images/template2024/homepage/vintage_new.jpg"
                                                 class="lazy ukss-prod-img" alt="VINTAGE SHIRTS" title=" VINTAGE SHIRTS "
                                                 style="display: block;">
                                             <div class="title-area">
@@ -3947,7 +3909,7 @@
                                         <a href="https://www.uksoccershop.com/football-shirts/personalised"
                                             class="category-card">
                                             <img width="275" height="275"
-                                                src="Personalized Product Banner.png"
+                                                src=" https://cdn2.uksoccershop.com/includes/templates/template2024/images/template2024/homepage/personalised_new.jpg"
                                                 class="lazy ukss-prod-img" alt="PERSONALISED GIFTS"
                                                 title=" PERSONALISED GIFTS " style="display: block;">
                                             <div class="title-area">
@@ -3959,7 +3921,7 @@
                                         <a href="https://www.uksoccershop.com/football-shirts/kids-football-kits"
                                             class="category-card">
                                             <img width="275" height="275"
-                                                src="Kids Shirts.png"
+                                                src=" https://cdn2.uksoccershop.com/includes/templates/template2024/images/template2024/homepage/kids_kit_new.jpg"
                                                 class="lazy ukss-prod-img" alt="KIDS KITS" title=" KIDS KITS "
                                                 style="display: block;">
                                             <div class="title-area">
@@ -3971,7 +3933,7 @@
                                         <a href="https://www.uksoccershop.com/specials/cheap-football-kits"
                                             class="category-card">
                                             <img width="275" height="275"
-                                                src="Clearance.png"
+                                                src=" https://cdn2.uksoccershop.com/includes/templates/template2024/images/template2024/homepage/UKSS-Clearance-Category-resized.jpg"
                                                 class="lazy ukss-prod-img" alt="Clearance" title=" Clearance "
                                                 style="display: block;">
                                             <div class="title-area">
@@ -5603,14 +5565,11 @@
             });
         });
     </script>
-    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'8f167ab99f3591e2',t:'MTczNDA5ODQxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
         integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-        data-cf-beacon='{"rayId":"8f167ab99f3591e2","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.5","token":"4b82e8ee57f141a7a6cf8093ad769dd4"}'
+        data-cf-beacon='{"rayId":"8f0e05f06dc25996","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.5","token":"4b82e8ee57f141a7a6cf8093ad769dd4"}'
         crossorigin="anonymous"></script>
-
-    <script src="index.js"></script>
 </body>
 
 </html>

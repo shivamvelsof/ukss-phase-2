@@ -132,7 +132,7 @@
 /* CATALOG GRID */
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 33.33%);
+  grid-template-columns: repeat(2, 50%);
   padding: 5px;
   .catalog-grid-item {
     padding: 5px;

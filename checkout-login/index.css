@@ -1,0 +1,316 @@
+body {
+  overflow-anchor: none;
+}
+
+.login-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
+.login-form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 99999;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: calc(100% - 20px);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+}
+.login-form-modal .floating-field {
+  margin-bottom: 10px;
+}
+.login-form-modal .or-divider {
+  text-align: center;
+  position: relative;
+  margin: 20px 0;
+}
+.login-form-modal .or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--color-border);
+  z-index: 1;
+}
+.login-form-modal .or-divider::before {
+  content: "OR";
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #fff;
+  color: #1e1e1e;
+  z-index: 2;
+}
+
+.forgot-password-wrapper {
+  margin-bottom: 15px;
+}
+.forgot-password-wrapper .forgot-password {
+  display: block;
+  color: #009efb;
+  letter-spacing: normal;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.forgot-password-wrapper .forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-form-wrapper {
+  max-height: 1000px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+.login-form-wrapper.hide-login-form {
+  max-height: 0px;
+}
+.login-form-wrapper form {
+  display: block;
+  width: 100%;
+}
+.login-form-wrapper form .login-btn {
+  background-color: #172b85;
+}
+
+.guest-login-wrapper form {
+  display: block;
+  width: 100%;
+}
+.guest-login-wrapper .login-btn {
+  margin-top: 20px;
+}
+
+.login-forms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.login-forms-grid .other-login-wrapper,
+.login-forms-grid .login-form-wrapper {
+  padding: 0 10px;
+}
+
+.login-with-email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #efefef;
+  color: #1e1e1e;
+  text-align: center;
+  border: none;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-with-email-btn.hide-btn {
+  display: none;
+}
+.login-with-email-btn svg {
+  margin-right: 5px;
+}
+
+a:visited.gp-btn,
+.gp-btn {
+  display: block;
+  width: 100%;
+  border: 1px solid #000002;
+  background-color: #000002;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a:visited.gp-btn svg,
+.gp-btn svg {
+  display: block;
+  margin-right: 5px;
+}
+a:visited.gp-btn:hover,
+.gp-btn:hover {
+  background-color: #1e1e1e;
+}
+
+.paypalFormButton2 {
+  margin-top: 20px;
+}
+.paypalFormButton2 a {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.paypalFormButton2 a img {
+  display: block;
+  height: 35px;
+  width: auto;
+  margin: 0 auto;
+}
+.paypalFormButton2 a p {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: normal;
+}
+
+.login-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+  text-transform: unset;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: 0.25s ease-in-out;
+  max-width: 180px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #218838;
+}
+
+/* FLOATING LABEL */
+:root {
+  --font-family: "Inter", sans-serif;
+  --color-blue: #0d6efd;
+  --color-border: rgb(222, 222, 222);
+  --color-gray: #373737;
+}
+
+.floating-field {
+  position: relative;
+}
+
+.floating-field .floating-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-inline: 5px;
+  transition: transform 200ms, font-size 200ms;
+  pointer-events: none;
+  transform-origin: left;
+  translate: -0.3em;
+  line-height: 16px;
+  color: #707070;
+}
+
+.floating-field .floating-input {
+  padding: 16px 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  color: #000;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.floating-field .floating-input::-moz-placeholder {
+  opacity: 0;
+}
+
+.floating-field .floating-input::placeholder {
+  opacity: 0;
+}
+
+.floating-field .floating-input:not(:-moz-placeholder-shown) {
+  padding: 26px 10px 6px;
+}
+
+.floating-field .floating-input:focus,
+.floating-field .floating-input:not(:placeholder-shown) {
+  padding: 26px 10px 6px;
+}
+
+.floating-field .floating-input:focus {
+  border-color: var(--color-blue);
+  box-shadow: 0px 0px 5px #9ec5fe;
+}
+
+.floating-field .floating-input:not(:-moz-placeholder-shown) + .floating-label {
+  transform: translateY(calc(-50% - 12px));
+  font-size: 12px !important;
+  color: #737373;
+}
+
+.floating-field .floating-input:focus + .floating-label,
+.floating-field .floating-input:not(:placeholder-shown) + .floating-label {
+  transform: translateY(calc(-50% - 12px));
+  font-size: 12px !important;
+  color: #737373;
+}
+
+.floating-field .floating-input:focus + .floating-label {
+  color: var(--color-blue);
+}
+
+.floating-field .floating-select {
+  padding: 16px 10px;
+  padding-right: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  color: #000;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  background-image: url("outline-down-icon.svg"); /* Optional custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+}
+
+.floating-field .floating-select:focus,
+.floating-field .floating-select.selected {
+  padding: 26px 10px 6px;
+}
+
+.floating-field .floating-select:focus {
+  border-color: var(--color-blue);
+  box-shadow: 0px 0px 5px #9ec5fe;
+}
+
+.floating-field .floating-select:focus + .floating-label,
+.floating-field .floating-select.selected + .floating-label {
+  transform: translateY(calc(-50% - 12px));
+  font-size: 12px !important;
+  color: #737373;
+}
+
+.floating-field .floating-select:focus + .floating-label {
+  color: var(--color-blue);
+}
+
+/* /FLOATING LABEL */
+@media (max-width: 380px) {
+  .login-form-modal {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}/*# sourceMappingURL=index.css.map */

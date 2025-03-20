@@ -1,0 +1,77 @@
+.head_top {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.middle_border {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.shipment {
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-details {
+  padding: 0;
+  margin: 0;
+}
+
+.current-state {
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: 500;
+  color: #1e1e1e;
+  background-color: rgb(242, 242, 242);
+  text-transform: uppercase;
+  line-height: 12px;
+  border-radius: 5px;
+}
+
+.status .text-block {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#orderAttribsList {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+#main_content #main_col {
+  width: 100%;
+}
+
+#main_content_col {
+  width: 100% !important;
+}
+
+.ask_question {
+  display: block;
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  letter-spacing: -0.15px;
+  font-size: 14px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.ask_question:hover {
+  background-color: #0b5ed7;
+  color: #fff;
+}
+
+.order-links a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.order-links a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=index.css.map */
