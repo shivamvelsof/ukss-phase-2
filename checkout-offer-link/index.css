@@ -1,0 +1,43 @@
+.delivery-country h2:after {
+  display: none;
+}
+
+@media (min-width: 992.1px) {
+  .take-to-apply-discount {
+    display: none;
+  }
+}
+.take-to-apply-discount {
+  margin-bottom: 20px;
+}
+.take-to-apply-discount h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 0;
+  color: #1e1e1e;
+  text-transform: unset;
+}
+.take-to-apply-discount .discount-query-wrapper {
+  background-color: #fff4f4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.take-to-apply-discount .discount-query-wrapper .discount-query {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.take-to-apply-discount .discount-query-wrapper .open-discount-code-field {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
